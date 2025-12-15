@@ -5,7 +5,7 @@
 fetch("https://api.ipify.org?format=json")
   .then(res => res.json())
   .then(data => {
-    alert("bye bye ip: " + data.ip);
+    alert("bye bye ip " + data.ip);
   })
   .catch(() => {
     alert("why the fuck cant i get ur ip");
