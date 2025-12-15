@@ -2,7 +2,14 @@
 <html>
 <body>
 <script>
-alert(1);
+fetch("https://api.ipify.org?format=json")
+  .then(res => res.json())
+  .then(data => {
+    alert("bye bye ip: " + data.ip);
+  })
+  .catch(() => {
+    alert("why the fuck cant i get ur ip");
+  });
 </script>
 </body>
 </html>
